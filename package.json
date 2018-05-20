@@ -8,15 +8,25 @@
     "react-scripts": "1.1.4"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.8.2",
-    "lint-staged": "^7.1.1",
+    "identity-obj-proxy": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "jest": "^20.0.4",
+    "jest-cli": "20.0.4",
+    "lint-staged": "^4.0.4",
     "pre-commit": "^1.2.2",
     "prettier": "^1.12.1",
+    "react-test-renderer": "^16.3.2",
     "stylelint": "^9.2.1",
     "stylelint-config-standard": "^18.2.0"
   },
@@ -25,14 +35,19 @@
     "build": "react-scripts build",
     "lint:eslint": "eslint .",
     "lint:stylelint": "stylelint src/**/*.css",
-    "format": "prettier --print-width=100 --single-quote --tralling-comma all --write \"{src,__test__}/**/*.js\"",
+    "format": "prettier --print-width=100 --single-quote --tralling-comma all --write \"{src,__tests__}/**/*.js\"",
     "lint-staged": "lint-staged",
     "lint": "yarn run lint:eslint && yarn run lint:stylelint",
     "test": "react-scripts test --env=jsdom",
+    "coverage": "yarn run test -- --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js",
+    "postcoverage": "istanbul check-coverage --statements 90 --functions 90 --branches 90 --lines 90",
     "eject": "react-scripts eject"
   },
   "lint-staged": {
     "*.js": [ "yarn run format", "git add" ]
   },
-  "pre-commit": "lint-staged"
+  "pre-commit": "lint-staged",
+  "jest-cli": {
+    "snapshotSerializers": [ "<rootDir>/node_modules/enzyme-to-json/serializer" ]
+  }
 }
