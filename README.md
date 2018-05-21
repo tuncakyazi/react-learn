@@ -1,3 +1,3 @@
 # Testing Repo
 
-Eslint, Stylelint, Prettier, VSCode, Jest, istanbul
+Eslint, Stylelint, Prettier, Jest, istanbul, Travis, Codecov
