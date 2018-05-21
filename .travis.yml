@@ -1,0 +1,20 @@
+# Dilimiz node js
+language : node_js
+
+# Sadece nodejs 7 için çalışıcak.
+node_js:
+ - "7"
+
+# sudo çalışmasın
+sudo : false
+
+# Yarn kullandığımız için yarnı cache'le
+cache : yarn
+
+# travisde bulunan yarnın versiyonunu 0.21.3 versiyonuna indiriyoruz. Versiyon sorunları için
+before_install :
+  - curl -o- -L https:yarnpkg.com/install.sh | bash -s -- --version 0.21.3
+
+# Çalışıcak script
+script :
+ - yarn run test:ci
