@@ -1,5 +1,5 @@
 {
-  "extends": "airbnb",
+  "extends": [ "airbnb", "prettier" ],
   "plugins": [ "react", "jsx-a11y", "import", "prettier" ],
   "env": {
     "browser": true,
@@ -9,6 +9,7 @@
   "rules": {
     "react/jsx-filename-extension": "off",
     "no-console": "off",
+    "no-debugger": "off",
     "prettier/prettier": [
       "error",
       {
@@ -17,6 +18,7 @@
         "printWidth": 100,
         "tabWidth": 2,
         "bracketSpacing": true,
+        "bracesSpacing": false,
         "semi": true,
         "useTabs": false,
         "jsxBracketSameLine": true

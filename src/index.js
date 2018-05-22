@@ -1,6 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import configureStore from './redux/configureStore';
+
+import './index.css';
+import App from './components/App';
+
+const store = configureStore(undefined); // preloadedState = undefined!
+
+const render = Component => {
+  ReactDOM.render(
+    <Provider store={store}>
+      <Component />
+    </Provider>,
+    document.getElementById('root')
+  );
+};
+
+if (process.env.NODE_ENV === 'development' && module.hot) {
+  module.hot.accept('./components/App', () => {
+    // eslint-disable-next-line
+    const NextApp = require('./components/App').default;
+    render(NextApp);
+  });
+}
+
+render(App);

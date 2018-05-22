@@ -9,8 +9,8 @@
     "prettier.semi": true,
     "prettier.useTabs": false,
     "prettier.jsxBracketSameLine": true,
-
-
+    "prettier.arrowParens": false,
+    
     "stylelint.enable": true,
     "css.validate": false,
     "less.validate": false,

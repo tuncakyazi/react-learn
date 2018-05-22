@@ -19,5 +19,6 @@ before_install :
 script :
  - yarn run test:ci
 
+# Testler bittikten sonra codecov çalıştır.
 after_success:
  - codecov
