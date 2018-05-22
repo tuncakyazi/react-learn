@@ -19,10 +19,11 @@
         "printWidth": 100,
         "tabWidth": 2,
         "bracketSpacing": true,
-        "bracesSpacing": true,
+        "bracesSpacing": false,
         "semi": true,
         "useTabs": false,
-        "jsxBracketSameLine": true
+        "jsxBracketSameLine": true,
+        "comma-dangle": "always"
       }
     ]
   }
