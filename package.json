@@ -9,7 +9,8 @@
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "redux-devtools-extension": "^2.13.2"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
@@ -33,7 +34,6 @@
     "pre-commit": "^1.2.2",
     "prettier": "^1.12.1",
     "react-test-renderer": "^16.3.2",
-    "redux-devtools-extension": "^2.13.2",
     "stylelint": "^9.2.1",
     "stylelint-config-standard": "^18.2.0"
   },
@@ -52,15 +52,10 @@
     "eject": "react-scripts eject"
   },
   "lint-staged": {
-    "*.js": [
-      "yarn run format",
-      "git add"
-    ]
+    "*.js": [ "yarn run format", "git add" ]
   },
   "pre-commit": "lint-staged",
   "jest-cli": {
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/enzyme-to-json/serializer"
-    ]
+    "snapshotSerializers": [ "<rootDir>/node_modules/enzyme-to-json/serializer" ]
   }
 }
