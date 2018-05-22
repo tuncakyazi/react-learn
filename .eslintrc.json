@@ -11,6 +11,7 @@
     "no-console": "off",
     "no-debugger": "off",
     "no-named-default": "off",
+    "comma-dangle": [ "always" ],
     "prettier/prettier": [
       "error",
       {
@@ -22,8 +23,7 @@
         "bracesSpacing": false,
         "semi": true,
         "useTabs": false,
-        "jsxBracketSameLine": true,
-        "comma-dangle": "always"
+        "jsxBracketSameLine": true
       }
     ]
   }
