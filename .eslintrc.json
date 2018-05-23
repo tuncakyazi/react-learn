@@ -1,29 +1,39 @@
 {
-  "extends": [ "airbnb", "prettier" ],
-  "plugins": [ "react", "jsx-a11y", "import", "prettier" ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "jest": true
-  },
-  "rules": {
-    "react/jsx-filename-extension": "off",
-    "no-console": "off",
-    "no-debugger": "off",
-    "no-named-default": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "trailingComma": "all",
-        "printWidth": 100,
-        "tabWidth": 2,
-        "bracketSpacing": true,
-        "bracesSpacing": false,
-        "semi": true,
-        "useTabs": false,
-        "jsxBracketSameLine": true
-      }
-    ]
-  }
+	"extends": [ "airbnb", "prettier", "prettier/flowtype", "prettier/react", "prettier/standard" ],
+	"plugins": [ "react", "jsx-a11y", "import", "prettier" ],
+	"env": {
+		"browser": true,
+		"node": true,
+		"jest": true
+	},
+	"rules": {
+		"react/jsx-filename-extension": "off",
+		"no-console": "off",
+		"no-debugger": "off",
+		"no-named-default": "off",
+		"comma-dangle": [
+			"error",
+			{
+				"arrays": "never",
+				"objects": "never",
+				"imports": "never",
+				"exports": "never",
+				"functions": "ignore"
+			}
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"singleQuote": true,
+				"trailingComma": "all",
+				"printWidth": 100,
+				"tabWidth": 2,
+				"bracketSpacing": true,
+				"bracesSpacing": false,
+				"semi": true,
+				"useTabs": false,
+				"jsxBracketSameLine": true
+			}
+		]
+	}
 }

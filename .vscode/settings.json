@@ -1,6 +1,7 @@
 {
     "editor.fontSize": 16,
-    "editor.formatOnSave" : true,
+    "editor.formatOnSave" : false,
+
     "prettier.tabWidth": 2,
     "prettier.printWidth": 100,
     "prettier.singleQuote": true,
@@ -8,7 +9,7 @@
     "prettier.bracketSpacing": true,
     "prettier.semi": true,
     "prettier.useTabs": false,
-    "prettier.jsxBracketSameLine": true,
+    "prettier.jsxBracketSameLine": false,
     "prettier.arrowParens": false,
    
     "stylelint.enable": true,
