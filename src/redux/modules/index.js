@@ -1,8 +1,6 @@
-// import { combineReducers } from 'redux'; // For multiple reducers
+import { combineReducers } from 'redux'; // For multiple reducers
+import { routerReducer } from 'react-router-redux';
 
-// const rootReducer = combineReducers({});
-
-// Şu an boş olduğu için
-const rootReducer = () => {};
-
-export default rootReducer;
+export default combineReducers({
+  router: routerReducer
+});

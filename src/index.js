@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
+import createHistory from 'history/createBrowserHistory';
+
 import configureStore from './redux/configureStore';
 
 import './index.css';
 import App from './components/App';
 
-const store = configureStore(undefined); // preloadedState = undefined!
+const history = createHistory();
+const store = configureStore(undefined, history); // preloadedState = undefined!
 
 const render = Component => {
   ReactDOM.render(
@@ -18,7 +21,7 @@ const render = Component => {
     document.getElementById('root')
   );
 };
-
+/* istanbul ignore if */
 if (process.env.NODE_ENV === 'development' && module.hot) {
   module.hot.accept('./components/App', () => {
     // eslint-disable-next-line
