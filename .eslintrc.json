@@ -11,6 +11,7 @@
 		"no-console": "off",
 		"no-debugger": "off",
 		"no-named-default": "off",
+		"requireForBlockBody": false,
 		"comma-dangle": [
 			"error",
 			{
@@ -33,6 +34,14 @@
 				"semi": true,
 				"useTabs": false,
 				"jsxBracketSameLine": true
+			}
+		],
+		"jsx-a11y/anchor-is-valid": [
+			"error",
+			{
+				"components": [ "Link" ],
+				"specialLink": ["to"],
+				"aspects": [ "noHref", "invalidHref", "preferButton" ]
 			}
 		]
 	}

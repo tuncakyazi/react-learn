@@ -1,13 +1,21 @@
 import React from 'react';
-import logo from './../images/logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
+import Content from './Content';
+import Home from './../routes/Home';
+import Product from './../routes/Product';
 
 const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to React App</h1>
-    </header>
+  <div>
+    <Header />
+    <Content>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/product" component={Product} />
+      </Switch>
+    </Content>
+    <Footer />
   </div>
 );
 

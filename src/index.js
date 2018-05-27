@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-
+import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
 import configureStore from './redux/configureStore';
@@ -15,7 +15,9 @@ const store = configureStore(undefined, history); // preloadedState = undefined!
 const render = Component => {
   ReactDOM.render(
     <Provider store={store}>
-      <Component />
+      <ConnectedRouter history={history}>
+        <Component />
+      </ConnectedRouter>
     </Provider>,
     // eslint-disable-next-line
     document.getElementById('root')
