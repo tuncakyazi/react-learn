@@ -15,12 +15,21 @@
   		"no-unused-vars": "off",
   		"no-unexpected-multiline": "error",
 		"requireForBlockBody": false,
-		"comma-dangle": [2, "always-multiline"],
+		"comma-dangle": [
+			"error",
+			{
+				"arrays": "never",
+				"objects": "never",
+				"imports": "never",
+				"exports": "never",
+				"functions": "ignore"
+			}
+		],
 		"prettier/prettier": [
 			"error",
 			{
 				"singleQuote": true,
-				"trailingComma": "all",
+				"trailingComma": "es5",
 				"printWidth": 100,
 				"tabWidth": 2,
 				"bracketSpacing": true,
