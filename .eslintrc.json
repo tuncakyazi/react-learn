@@ -15,16 +15,7 @@
   		"no-unused-vars": "off",
   		"no-unexpected-multiline": "error",
 		"requireForBlockBody": false,
-		"comma-dangle": [
-			"error",
-			{
-				"arrays": "never",
-				"objects": "never",
-				"imports": "never",
-				"exports": "never",
-				"functions": "ignore"
-			}
-		],
+		"comma-dangle": [2, "always-multiline"],
 		"prettier/prettier": [
 			"error",
 			{
