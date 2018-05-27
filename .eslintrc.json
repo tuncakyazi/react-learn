@@ -11,6 +11,9 @@
 		"no-console": "off",
 		"no-debugger": "off",
 		"no-named-default": "off",
+		"no-undef": "off",
+  		"no-unused-vars": "off",
+  		"no-unexpected-multiline": "error",
 		"requireForBlockBody": false,
 		"comma-dangle": [
 			"error",
